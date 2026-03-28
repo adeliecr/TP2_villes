@@ -70,6 +70,7 @@ Flight::route('/villes', function() {
 
             }
         
+        
         $requete = mysqli_prepare($link, "SELECT nom, ST_X(ST_GeomFromText(ST_AsText(ST_Centroid(geometry)),4326)) AS lon
                                             ,ST_Y(ST_GeomFromText(ST_AsText(ST_Centroid(geometry)),4326)) AS lat from geobase.communes where nom like ? limit 20 " );
             mysqli_stmt_bind_param($requete, "s", $resultat );

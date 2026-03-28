@@ -1,5 +1,43 @@
 
+/* Carte */
 #map { height: 700px; 
-       width: 100%; 
-       border: 2px solid teal;
+       border: 2px solid rgb(43, 116, 116);
+}
+
+.leaflet-marker-icon:hover {
+    filter: drop-shadow(0 0 5px rgb(230, 66, 192));
+    transition: transform 0.1s ease, filter 0.1s ease;
+}
+
+/* Titre et formulaire */
+h1 {
+    color: rgb(43, 116, 116);
+    font-size: 36px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+}
+
+#speciales {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+/* changement de curseur */
+.menu {
+    cursor: pointer;   
+}
+
+.btn {
+    cursor: pointer;
 }
