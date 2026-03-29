@@ -8,6 +8,7 @@ L'application utilise :
 - **MySQL** pour exploiter les données de la table "communes" de la base de données "geobase"
 - La librairie **Leaflet.js** pour l'affichage de la carte, des éléments dessus ; marqueurs, popups, et pour l'utilisation de fonctions 
 - La librairie **Vue.js** pour l'interface utilisateur : gestion du formulaire et des interactions avec la carte
+- Le **dépôt GitHub leaflet-color-markers** de *pointhi* pour l'icône du marqueur rouge
 
 # 1.Fonctionnement 
 L'application permet d'afficher des marqueurs correspondant à des villes sur une carte de France metropolitaine, selon les caractéristiques de leurs noms. Il est possible de sélectionner dans un menu le type :
