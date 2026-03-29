@@ -6,7 +6,7 @@
 L'application utilise : 
 - PHP avec le framework Flight pour gérer les routes et faire les requêtes SQL à la base de données "geobase"
 - MySQL pour exploiter les données de la table "communes" de la base de données "geobase"
-- La librairie Leaflet.js pour l'affichage de la carte, d'éléments dessus ; marqueurs, popups, et l'utilisation de fonction 
+- La librairie Leaflet.js pour l'affichage de la carte, des éléments dessus ; marqueurs, popups, et pour l'utilisation de fonctions 
 - La librairie Vue.js pour l'interface utilisateur : gestion du formulaire et des interactions avec la carte
 
 # 1.Fonctionnement 
@@ -28,6 +28,6 @@ Il est possible de cliquer sur les marqueurs pour faire apparaitre le popup de l
 
 Cette fonctionnalité a pour but de calculer la distance entre chaque ville de la recherche et l'ENSG, et de faire apparaître un marqueur rouge sur l'emplacement de l'ENSG avec un popup qui s'ouvre automatiquement : "Je suis l'ENSG". 
 
-Si la checkbox associée "Afficher la distance de chaque villes à l'ENSG" est cochée, le marqueur rouge et son popup apparaissent, et la distance apparaît dans chaque popup de chaque ville de la recherche, en plus du nom de la ville. 
+Si la checkbox associée "Afficher la distance de chaque villes à l'ENSG" est cochée, et qu'une recherche qui renverra au moins une ville est lancée, le marqueur rouge et son popup apparaissent, et la distance apparaît dans chaque popup de chaque ville de la recherche, en plus du nom de la ville. 
 
 Cette distance est calculée grâce à la fonction de la librairie Leaflet.js *distanceTo*. Cette fonction renvoie la distance en mètres et non arrondie, donc elle est arrondie avec la fonction *Math.round()* de JavaScript et convertie en km en divisant par 1000. 
