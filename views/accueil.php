@@ -35,7 +35,7 @@
         <select v-model="type" class='menu'>
             <option value="commence">Commence par</option>
             <option value="contient">Contient</option>
-            <option value="finit">Finit par</option>
+            <option value="finit">Se termine par</option>
         </select>
         <input type="text" v-model="saisie" id="city" name="city" placeholder="Entrez des lettres">
         <button type='button' @click='rechercher' class='btn'>OK</button> <br><br>
@@ -44,6 +44,8 @@
             <button type = 'button' @click = "recherchespeciale('contient','ign')" class='btn'> IGN </button>
             <button type = 'button' @click = "recherchespeciale('commence','rien')" class='btn'> RIEN </button>
         </div>
+        <input type="checkbox" v-model='calculdist' class='checkbox'>
+        <label for="calcul">Afficher la distance de chaque villes à l'ENSG</label>
     </form>
 </div>
 

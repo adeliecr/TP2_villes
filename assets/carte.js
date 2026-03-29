@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
   data() {
     return {
       saisie:'',
-      type:'commence'
+      type:'commence',
+      calculdist:false
 
     };
 },
@@ -62,11 +63,20 @@ document.addEventListener('DOMContentLoaded', function() {
               } 
               else {
                 data.forEach(ville => {
-                  console.log('marker:', ville.nom);
                   // marker
                   var marker = L.marker([ville.lat, ville.lon]).addTo(markers);
+                  
                   // popup
-                  marker.bindPopup('Je suis la ville de ' + ville.nom);
+                  if (this.calculdist) {
+                    var latlngensg=L.latLng(48.841083, 2.587404)
+                    var latlngville=L.latLng(ville.lat, ville.lon)
+                    var distanceensg=latlngensg.distanceTo( latlngville) //renvoi en mètres
+                    marker.bindPopup('Je suis la ville de ' + ville.nom + ', je me situe à ' + Math.round(distanceensg/1000) + " km de l'ENSG"); //Afficher en km
+                  }
+
+                  else {
+                    marker.bindPopup('Je suis la ville de ' + ville.nom);
+                  }
                 })
               }
         })
@@ -82,8 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
       this.rechercher()
     },
   }
-  
-
 }).mount('#app')
 });
 
