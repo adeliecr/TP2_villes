@@ -31,4 +31,4 @@ Cette fonctionnalité a pour but de calculer la distance entre chaque ville de l
 
 Si la checkbox associée "Afficher la distance de chaque villes à l'ENSG" est cochée, et qu'une recherche qui renverra au moins une ville est lancée (via les boutons paramétrés ou avec la barre de recherche), le marqueur rouge et son popup apparaissent, et la distance apparaît dans chaque popup de chaque ville de la recherche, en plus du nom de la ville. 
 
-Cette distance est calculée grâce à la fonction de la librairie Leaflet.js *distanceTo*. Cette fonction renvoie la distance en mètres et non arrondie, donc elle est arrondie avec la fonction *Math.round()* de JavaScript et convertie en km en divisant par 1000. 
+Cette distance est calculée grâce à la fonction de la librairie Leaflet.js *distanceTo*  Cette fonction renvoie la distance en mètres et non arrondie, donc elle est arrondie avec la fonction *Math.round()* de JavaScript et convertie en km en divisant par 1000. 
