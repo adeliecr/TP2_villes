@@ -27,8 +27,6 @@
 
 <h1>Villes de France</h1>
 
-<!-- Formulaire users -->
-<!-- v-model permet de mettre a jour le champs qd la variable change -->
 <div id='app'>
     <form>
         <label for="city">Rechercher une ville : </label>
@@ -44,7 +42,7 @@
             <button type = 'button' @click = "recherchespeciale('contient','ign')" class='btn'> IGN </button>
             <button type = 'button' @click = "recherchespeciale('commence','rien')" class='btn'> RIEN </button>
         </div>
-        <input type="checkbox" v-model='calculdist' class='checkbox'>
+    <br><input type="checkbox" id='calcul' v-model='calculdist' class='checkbox'>
         <label for="calcul">Afficher la distance de chaque villes à l'ENSG</label>
     </form>
 </div>
