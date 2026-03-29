@@ -11,7 +11,7 @@ L'application utilise :
 - Le **dépôt GitHub leaflet-color-markers** de *pointhi* pour l'icône du marqueur rouge
 
 # 1.Fonctionnement 
-L'application permet d'afficher des marqueurs correspondant à des villes sur une carte de France metropolitaine, selon les caractéristiques de leurs noms. Il est possible de sélectionner dans un menu le type :
+L'application permet d'afficher des marqueurs correspondant à des villes sur une carte de France metropolitaine, selon les caractères dans leurs noms. Il est possible de sélectionner dans un menu le type :
 - commence par
 - se termine par
 - contient.
